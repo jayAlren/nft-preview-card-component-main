@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+
+/* Primary
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+*/
+
+/* Neutral
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%) */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+	font-size: 16px;
+	font-family: 'Outfit', sans-serif;
+	font-weight: 500;
+	background-color: hsl(217, 54%, 11%); /* Very dark blue */
+	color: hsl(0, 0%, 100%); /* White */
+}
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.content {
+	height: 475px;
+	width: 300px;
+	background-color: hsl(216, 50%, 16%); /* Very dark blue (card BG) */
+	padding: 15px;
+	border: none;
+	border-radius: 10px;
+}
+
+.preview-overlay {
+	position: relative;
+}
+
+.preview-avatar {
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: 223px;
+	object-fit: cover;
+	border: none;
+	border-radius: 10px;
+	margin: 0 0 15px 0; 
+	transition: .5s ease;
+	backface-visibility: hidden;
+}
+
+.preview-middle {
+	transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.preview-overlay:hover .preview-avatar{
+	opacity: 0.3;
+	cursor: pointer;
+}
+
+.preview-overlay:hover .preview-middle{
+	opacity: 1;
+	cursor: pointer;
+}
+
+.preview-header {
+	font-weight: 700;
+	font-size: 18px;
+	margin: 0 0 15px 0;
+}
+
+.preview-header:hover {
+	cursor: pointer;
+	color: hsl(178, 100%, 50%); /* cyan */
+}
+
+.preview-info {
+	color: hsl(215, 51%, 70%); /* Soft blue */
+	font-weight: 300;
+}
+
+.preview-details {
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+	margin: 20px 0 20px 0;
+}
+
+.preview-detail {
+	flex-grow: 2;
+}
+
+.preview-detail img {
+	vertical-align: middle;
+}
+
+.preview-creator {
+	display: flex;
+	align-items: center;
+	border-top: 1px solid hsl(215, 51%, 70%);
+	padding: 15px 0;
+}
+
+.preview-creator img {
+	border: 1px solid white;
+	border-radius: 50%;
+	height: 40px;
+	vertical-align: middle;
+}
+
+.preview-creator span {
+	padding: 0 5px 0 15px;
+	color: hsl(215, 51%, 70%); /* Soft blue */
+}
+
+.preview-creator p:hover {
+	cursor: pointer;
+	color: hsl(178, 100%, 50%); /* cyan */;
+}
+
+footer {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	padding: 10px 0;
+	border-top: 1px dashed hsl(0, 0%, 100%);
+	text-align: center;
+	font-size: 12px;
+}
+
+footer a {
+	color: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 600px) {
+	body {
+		font-size: 15px;
+	}
+	.content {
+		padding: 20px;
+	}
+	.
+
+}
